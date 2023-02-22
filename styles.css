@@ -121,22 +121,45 @@ form {
 }
 
 .saved-idea-box {
-  border: 1px solid;
-  border-color: #353567;
+  /* border: 1px solid;
+  border-color: #353567;   */
+  background-color: #FFFFFF;
+  height: 150px;
 }
 
 .saved-idea-box header {
+  display: flex;
+  justify-content: space-between;
   background-color: #1F1F3D;
+  height: 20px;
+}
+
+#idea-title{
+  margin-left: 10px;
+  font-size: medium;
+}
+
+#idea-body-text{
+  margin-left: 10px;
 }
 
 .saved-idea-box body {
-  background-color: #FFFFFF;
+  display: flex;
   color: #1F1F3D;
-  border: 1px solid;
-  border-color: #353567;
+  /* border: 1px solid;
+  border-color: #353567; */
+  height: 100%
 }
 
 .saved-idea-box footer {
+  display: flex;
+  justify-content: flex-start;
   background-color: #5356A4;
   color: #E9E9F3;
+  height: 20px;
+  font-size: small;
+}
+
+#comment {
+  margin-top: 2px;
 }
