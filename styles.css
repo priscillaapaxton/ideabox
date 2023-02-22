@@ -1,0 +1,111 @@
+.hidden {
+  display: none!important;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0px;
+  background-size: cover;
+}
+
+.main-container {
+  border: medium dashed green;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+nav {
+  background-color: #1F1F3D;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 5%;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: #BFBFDD;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #BFBFDD; 
+  font-weight: bold;
+}
+
+.container1 {
+  display: flex;
+  width: 27%;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container4 {
+  border: solid #5356A4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#input-box1, #input-box2 {
+  width: 290px;
+  height: 40px;
+  border: solid #5356A4;
+}
+
+#input-box2 {
+  height: 80px;
+  border-style: solid 5px #5356A4;
+}
+
+.save {
+    background-color: #1F1F3D;
+    border: solid #5356A4;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+    font-weight: bold;
+    width: 290px;
+    white-space: nowrap;
+}
+
+.starred {
+    background-color:  #5356A4;
+    border: solid #353567;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 195px;
+    white-space: nowrap;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #1F1F3D
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  width: 78%;
+  height: 300px;
+  background-color: #A9AAD2;
+  align-items: center;
+}
+
+
