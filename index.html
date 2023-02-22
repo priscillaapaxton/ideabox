@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav id="side-navigation">
+      <header id="side-nav-header1">IdeaBox</header>
+      <div id="side-nav-div2">
+        <header id="side-nav-header2">Filter Starred Ideas</header>
+        <button id="side-nav-button">Show Starred Ideas</button>
+      </div>
+    </nav>
+    <div id="ideas-form-and-saved">
+      <form>
+        <div>
+          <header class="form-header">Title</header>
+          <input class="input" type="text" name="title" id="title-input">
+        </div>
+        <div>
+          <header class="form-header">Body</header>
+          <input class="input" type="text" name="body" id="body-input"> 
+        </div>
+        <button id="save-button">Save</button>
+          <div id="search-box">
+            <img id="search-icon"src="assets/search.svg"/>
+            <input type="text" name="search" id="search-input" placeholder="Search Ideas">
+          </div>
+        </form>
+      <div id="saved-ideas">
+        <article id="saved-ideas-grid"></article>
+      </div>
+    </div>
+  </body>
+</html>
