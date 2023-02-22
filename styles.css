@@ -119,3 +119,24 @@ form {
   background-color: #EAEAF4;
   height: 60%;
 }
+
+.saved-idea-box {
+  border: 1px solid;
+  border-color: #353567;
+}
+
+.saved-idea-box header {
+  background-color: #1F1F3D;
+}
+
+.saved-idea-box body {
+  background-color: #FFFFFF;
+  color: #1F1F3D;
+  border: 1px solid;
+  border-color: #353567;
+}
+
+.saved-idea-box footer {
+  background-color: #5356A4;
+  color: #E9E9F3;
+}
