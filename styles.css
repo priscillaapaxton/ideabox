@@ -1,0 +1,77 @@
+html {
+  margin: 0;
+}
+
+h1,
+h2 {
+ font-family:'Open Sans', sans-serif, bold;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif, light;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.main-page-content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.line {
+  background-color: #353567;
+  height: 1px;
+}
+
+.left-bar {
+  background-color: #1F1F3D;
+  width: 30%;
+}
+
+.title,
+.show-ideas {
+  color: #E9E9F3;
+}
+
+.show-ideas {
+  background-color: #5356A4;
+}
+
+.filter {
+  color: #BFBFDD;
+}
+
+.input-form {
+  background-color: #A9AAD2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.idea-display {
+  background-color: #EAEAF4;
+}
+
+.search-icon {
+  height: 10%;
+  width: 10%;
+  background-color: #5356A4;
+}
+
+.search-icon-parent {
+  display: flex;
+  justify-content: center;
+
+}
+
+.idea-display,
+.input-form {
+  height: 50%;
+}
+
+.form {
+  width: 45%;
+}
