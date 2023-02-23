@@ -1,8 +1,9 @@
 // ***** Query Selectors *****
-var titleInput = document.querySelector('#title-input');
-var bodyInput = document.querySelector('#body-input');
-var saveButton = document.querySelector('#save-button');
-var savedIdeasSection = document.querySelector('#saved-ideas')
+var titleInput = document.querySelector('#inputTitle');
+var bodyInput = document.querySelector('#inputBody');
+var saveButton = document.querySelector('#buttonSave');
+var savedIdeasSection = document.querySelector('#savedIdeasCards')
+
 
 // ***** Data Model ********
 var savedIdeas = [];
@@ -13,7 +14,7 @@ var newIdea;
 saveButton.addEventListener('click', saveIdea);
 
 // ***** Event Handlers *******
-function saveIdea(event) {
+function saveIdea() {
   event.preventDefault()
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
@@ -24,12 +25,12 @@ function saveIdea(event) {
         <img id="x" class="header-img"src="assets/delete.svg"/>
       </header>
       <div class="saved-idea-box body">
-        <h1 id="idea-title">${titleInput.value}</h1>
-        <p id="idea-body-text">${bodyInput.value}</p>
+        <h1 class="idea-title">${titleInput.value}</h1>
+        <p class="idea-body-text">${bodyInput.value}</p>
       </div>   
       <footer class="saved-idea-box footer">
-       <img id="comment-img" src="assets/comment.svg"/>
-        <p id="comment">Comment</p>
+       <img class="comment-img" src="assets/comment.svg"/>
+        <p class="comment">Comment</p>
       </footer>
     </div>
   `

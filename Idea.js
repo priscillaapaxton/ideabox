@@ -6,8 +6,9 @@ class Idea {
     this.starred = false;
   }
 
-  // updateIdea () {
-  //   this.starred = true;
-  // }
+  updateIdea () {
+    this.starred = true;
+  }
+
 
 }
