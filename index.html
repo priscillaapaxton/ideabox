@@ -1,32 +1,33 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <nav id="side-navigation">
-      <header id="side-nav-header1">IdeaBox</header>
-      <div id="side-nav-div2">
-        <header id="side-nav-header2">Filter Starred Ideas</header>
-        <button id="side-nav-button">Show Starred Ideas</button>
+    <nav class="side-navigation">
+      <h1 class="side-nav-header1">IdeaBox</h1>
+      <div id="sideNavDiv2" class="side-title-button">
+        <header class="side-nav-header2">Filter Starred Ideas</header>
+        <button class="side-nav-button">Show Starred Ideas</button>
       </div>
     </nav>
-    <div id="ideas-form-and-saved">
+    <div class="ideas-form-and-saved">
       <form>
         <div>
           <header class="form-header">Title</header>
-          <input class="input" type="text" name="title" id="title-input" maxlength="20">
+          <input class="title-input" id="inputTitle" type="text" name="title" maxlength="20">
         </div>
         <div>
           <header class="form-header">Body</header>
-          <textarea class="input" type="text" name="body" id="body-input" maxlength="125"></textarea> 
+          <textarea class="body-input" id="inputBody" type="text" name="body" maxlength="125"></textarea> 
         </div>
-        <button id="save-button">Save</button>
-        <div id="search-box">
-          <img id="search-icon"src="assets/search.svg"/>
-          <input type="text" name="search" id="search-input" placeholder="Search Ideas">
+        <button class="save-button" id="buttonSave">Save</button>
+        <div class="search-box">
+          <img class="search-icon" src="assets/search.svg"/>
+          <input type="text" name="search" class="search-input" placeholder="Search Ideas">
         </div>
         </form>
-      <div id="saved-ideas"></div>
+      <div class="saved-ideas" id="savedIdeasCards"></div>
     </div>
   </body>
   <script src="Idea.js"></script>  
