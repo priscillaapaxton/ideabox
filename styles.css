@@ -1,39 +1,40 @@
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   font-family: 'Open Sans', sans-serif, bold;
   background-color: #1F1F3D;
   margin: 0;
+  height: 100%;
 }
 
-#side-navigation {
+.side-navigation {
   display: flex;
   flex-direction: column;
   color: #E9E9F3;
-  border: 1px solid;
-  border-color: #353567;
   width: 35%;
 }
 
-#side-nav-div2 {
+.side-title-button {
   border: 1px solid;
   border-color: #353567;
   padding: 5px;
 }
 
-#side-nav-header1{
+.side-nav-header1 {
   color: #E9E9F3;
-  border: 1px solid;
-  border-color: #353567;
   padding: 10px;
 }
 
-#side-nav-header2{
+.side-nav-header2 {
   color: #BFBFDD;
   font-size: small;
   margin: 10px;
 }
 
-#side-nav-button {
+.side-nav-button {
   background-color: #5356A4;
   color: #E9E9F3;
   margin: 10px;
@@ -45,7 +46,7 @@ body {
   height: 35px;
 }
 
-#ideas-form-and-saved {
+.ideas-form-and-saved {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -68,18 +69,19 @@ form {
   margin-bottom: 5px;
 }
 
-.input {
+.title-input {
   border: 1px solid;
   border-color: #353567;
   width: 300px;
   height: 35px;
 }
 
-#body-input {
+.body-input {
   height: 70px;
+  width: 300px;
 }
 
-#search-box {
+.search-box {
   display: flex;
   flex-direction: row;
   background-color: #353567;
@@ -89,19 +91,21 @@ form {
   justify-content: space-between;
 }
 
-#search-input {
+.search-input {
   width: 270px;
   height: 35px;
+  border: 0;
+  padding: 0;
 }
 
-#search-icon {
+.search-icon {
   display: flex;
   height: 18px;
   width: 18px;
   margin-left: 5px;
 }
 
-#save-button {
+.save-button {
   background-color: #353567;
   color: #E9E9F3;
   width: 300px;
@@ -111,7 +115,7 @@ form {
   font-size: medium;
 }
 
-#saved-ideas {
+.saved-ideas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -134,13 +138,13 @@ form {
   border-color: #353567;  
 }
 
-#idea-title{
+.idea-title {
   margin-left: 10px;
   margin-right: 10px;
   font-size: medium;
 }
 
-#idea-body-text{
+.idea-body-text {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -163,6 +167,6 @@ form {
   border-color: #353567;  
 }
 
-#comment {
+.comment {
   margin-top: 2px;
 }
