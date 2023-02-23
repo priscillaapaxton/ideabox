@@ -7,14 +7,25 @@ var savedIdeasSection = document.querySelector('#savedIdeasCards')
 
 // ***** Data Model ********
 var savedIdeas = [];
-var pineapple = "pineapple"
 var newIdea;
 
 // ***** Event Listeners *******
 saveButton.addEventListener('click', saveIdea);
+titleInput.addEventListener('input', buttonChange)
+bodyInput.addEventListener('input', buttonChange)
 
 // ***** Event Handlers *******
-function saveIdea() {
+saveButton.disabled = true;
+
+function buttonChange (event) {
+  event.preventDefault()
+  if (titleInput.value && bodyInput.value) {
+    saveButton.disabled = false;
+    saveButton.classList.add('cursor');
+  }
+}
+
+function saveIdea(event) {
   event.preventDefault()
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
