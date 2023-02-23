@@ -7,14 +7,32 @@ var savedIdeasSection = document.querySelector('#savedIdeasCards')
 
 // ***** Data Model ********
 var savedIdeas = [];
-var pineapple = "pineapple"
 var newIdea;
 
 // ***** Event Listeners *******
 saveButton.addEventListener('click', saveIdea);
+titleInput.addEventListener('input', buttonChange)
+bodyInput.addEventListener('input', buttonChange)
 
 // ***** Event Handlers *******
-function saveIdea() {
+saveButton.disabled = true;
+
+function buttonChange (event) {
+  event.preventDefault()
+  if (titleInput.value && bodyInput.value) {
+    saveButton.disabled = false;
+    saveButton.style.background = '#1F1F3D'
+    saveButton.classList.add('cursor');
+  }
+}
+
+function emptyInputs() {
+  titleInput.value = "";
+  bodyInput.value = "";
+}
+
+
+function saveIdea(event) {
   event.preventDefault()
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
@@ -34,4 +52,8 @@ function saveIdea() {
       </footer>
     </div>
   `
+  emptyInputs()
+  saveButton.disabled = true;
+  saveButton.classList.remove('cursor')
+  saveButton.style.background = '#353567'
 }
