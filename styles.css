@@ -121,10 +121,8 @@ form {
 }
 
 .saved-idea-box {
-  /* border: 1px solid;
-  border-color: #353567;   */
   background-color: #FFFFFF;
-  height: 150px;
+  height: 130px;
 }
 
 .saved-idea-box header {
@@ -132,23 +130,26 @@ form {
   justify-content: space-between;
   background-color: #1F1F3D;
   height: 20px;
+  border: 1px solid;
+  border-color: #353567;  
 }
 
 #idea-title{
   margin-left: 10px;
+  margin-right: 10px;
   font-size: medium;
 }
 
 #idea-body-text{
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .saved-idea-box body {
   display: flex;
   color: #1F1F3D;
-  /* border: 1px solid;
-  border-color: #353567; */
-  height: 100%
+  border: 1px solid;
+  border-color: #353567;
 }
 
 .saved-idea-box footer {
@@ -158,6 +159,8 @@ form {
   color: #E9E9F3;
   height: 20px;
   font-size: small;
+  border: 1px solid;
+  border-color: #353567;  
 }
 
 #comment {
