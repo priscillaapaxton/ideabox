@@ -10,4 +10,5 @@ class Idea {
     this.starred = true;
   }
 
+
 }

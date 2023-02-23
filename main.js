@@ -4,6 +4,7 @@ var bodyInput = document.querySelector('#inputBody');
 var saveButton = document.querySelector('#buttonSave');
 var savedIdeasSection = document.querySelector('#savedIdeasCards')
 
+
 // ***** Data Model ********
 var savedIdeas = [];
 var pineapple = "pineapple"
