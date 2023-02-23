@@ -1,12 +1,13 @@
 class Idea {
-  constructor(title, body) {
+  constructor (titleInput, bodyInput) {
     this.id = Date.now();
-    this.title = title.value;
-    this.body = body.value;
+    this.title = titleInput;
+    this.body = bodyInput;
     this.starred = false;
   }
 
-  update() {
+  updateIdea () {
     this.starred = true;
   }
+
 }
