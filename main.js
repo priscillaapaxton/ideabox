@@ -63,9 +63,10 @@ savedIdeasSection.addEventListener('click', starChanged)
 
 function starChanged() {
   if (event.target.id === 'star') {
-    event.target.parentNode.innerHTML = `
+    event.target.parentNode.innerHTML += `
     <img src="./assets/star-active.svg">
-    <img id="x" class="header-img cursor" src="assets/delete.svg"/>`
+    
+    `
   }
 }
 
