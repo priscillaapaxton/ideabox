@@ -14,7 +14,6 @@ titleInput.addEventListener('input', buttonChange);
 bodyInput.addEventListener('input', buttonChange);
 savedIdeasSection.addEventListener('click', deleteIdea);
 savedIdeasSection.addEventListener('click', starIdea);
-savedIdeasSection.addEventListener('click', unStarIdea);
 
 // ***** Event Handlers *******
 saveButton.disabled = true;
@@ -39,14 +38,14 @@ function saveIdea(event) {
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
   savedIdeasSection.innerHTML += `
-    <section class="saved-idea-box">
+    <section id=${newIdea.id} class="saved-idea-box">
       <header class="saved-idea-box header">
         <img id="star" class="header-img cursor" src="assets/star.svg"/>
         <img id="x" class="header-img cursor"src="assets/delete.svg"/>
       </header>
       <div class="saved-idea-box body">
-        <h1 class="idea-title">${titleInput.value}</h1>
-        <p class="idea-body-text">${bodyInput.value}</p>
+        <h1 class="idea-title">${newIdea.title}</h1>
+        <p class="idea-body-text">${newIdea.body}</p>
       </div>   
       <footer class="saved-idea-box footer">
        <img class="comment-img" src="assets/comment.svg"/>
@@ -60,28 +59,43 @@ function saveIdea(event) {
   saveButton.style.background = '#353567'
 }
 
-
 function deleteIdea (event) {
+  var ideaId = parseInt(event.target.closest('section').id)
+
   if (event.target.id === 'x') {
-      event.target.closest('section').remove();
+    for (var i = 0; i < savedIdeas.length; i++) {
+      if (ideaId === savedIdeas[i].id) {
+        savedIdeas.splice(i,1)
+      }
+    }
+    event.target.closest('section').remove();
   }
 }
 
 function starIdea (event) {
+  var ideaId = parseInt(event.target.closest('section').id)
+
   if (event.target.id === 'star') {
-      event.target.parentNode.innerHTML = `
-      <img id="activeStar" class="header-img cursor" src="assets/star-active.svg"/>
-      <img id="x" class="header-img cursor"src="assets/delete.svg"/>
-      `
+    event.target.parentNode.innerHTML = `
+    <img id="activeStar" class="header-img cursor" src="assets/star-active.svg"/>
+    <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+    `
+      
+    for (var i = 0; i < savedIdeas.length; i++) {
+      if (ideaId === savedIdeas[i].id) {
+        savedIdeas[i].updateIdea()
+      }
+    }
+  } else if (event.target.id === 'activeStar') {
+    event.target.parentNode.innerHTML = `
+    <img id="star" class="header-img cursor" src="assets/star.svg"/>
+    <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+    `
+    
+    for (var i = 0; i < savedIdeas.length; i++) {
+      if (ideaId === savedIdeas[i].id) {
+        savedIdeas[i].updateIdea()
+      }
+    }
   }
 }
-
-function unStarIdea (event) {
-  if (event.target.id === 'activeStar') {
-      event.target.parentNode.innerHTML = `
-      <img id="star" class="header-img cursor" src="assets/star.svg"/>
-      <img id="x" class="header-img cursor"src="assets/delete.svg"/>
-      `
-  }
-}
-
