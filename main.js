@@ -40,7 +40,7 @@ function saveIdea(event) {
     <div class="saved-idea-box">
       <header class="saved-idea-box header">
         <img id="star" class="header-img" src="assets/star.svg"/>
-        <img id="x" class="header-img"src="assets/delete.svg"/>
+        <img id="x" class="header-img cursor" src="assets/delete.svg"/>
       </header>
       <div class="saved-idea-box body">
         <h1 class="idea-title">${titleInput.value}</h1>
@@ -56,4 +56,14 @@ function saveIdea(event) {
   saveButton.disabled = true;
   saveButton.classList.remove('cursor')
   saveButton.style.background = '#353567'
+}
+
+savedIdeasSection.addEventListener('click', removeCard)
+
+function removeCard() {
+   console.log("getting closer")
+  if (event.target.classList.contains('header-img')) {
+    console.log("hello")
+    event.target.parentNode.parentNode.remove();
+  }
 }
