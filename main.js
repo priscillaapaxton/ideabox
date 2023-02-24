@@ -67,6 +67,11 @@ function checkStar(event) {
   <img id="x" class="header-img cursor"src="assets/delete.svg"/>
   `
  }
+ for (var i = 0; i < savedIdeas.length; i++) {
+  if (event.target.closest('header').id == savedIdeas[i].id) {
+    savedIdeas.push(newIdea)
+  }
+ }
 };
 
 function uncheckStar(event) {
