@@ -115,6 +115,10 @@ form {
   font-size: medium;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .saved-ideas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
