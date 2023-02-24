@@ -38,7 +38,7 @@ function saveIdea(event) {
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
   savedIdeasSection.innerHTML += `
-    <div class="saved-idea-box">
+    <section id="${newIdea.id}" class="saved-idea-box">
       <header class="saved-idea-box header">
         <img id="star" class="header-img cursor" src="assets/star.svg"/>
         <img id="x" class="header-img cursor"src="assets/delete.svg"/>
@@ -51,7 +51,7 @@ function saveIdea(event) {
        <img class="comment-img" src="assets/comment.svg"/>
         <p class="comment">Comment</p>
       </footer>
-    </div>
+    </section>
   `
   emptyInputs()
   saveButton.disabled = true;
@@ -60,16 +60,16 @@ function saveIdea(event) {
 }
 
 function checkStar(event) {
+  var ideaId = parseInt(event.target.closest('section').id)
  if (event.target.id === "star") {
-  console.log("hi")
   event.target.parentNode.innerHTML = `
   <img id="checked-star" class="header-img cursor" src="assets/star-active.svg"/>
   <img id="x" class="header-img cursor"src="assets/delete.svg"/>
   `
  }
  for (var i = 0; i < savedIdeas.length; i++) {
-  if (event.target.closest('header').id == savedIdeas[i].id) {
-    savedIdeas.push(newIdea)
+  if (savedIdeas[i].id == ideaId) {
+    //savedIdeas.push(newIdea)
   }
  }
 };
