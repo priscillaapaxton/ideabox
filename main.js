@@ -14,7 +14,7 @@ saveButton.addEventListener('click', saveIdea);
 titleInput.addEventListener('input', buttonChange)
 bodyInput.addEventListener('input', buttonChange)
 savedIdeasSection.addEventListener('click', checkStar)
-
+savedIdeasSection.addEventListener('click', uncheckStar)
 // ***** Event Handlers *******
 saveButton.disabled = true;
 
@@ -69,4 +69,11 @@ function checkStar(event) {
  }
 };
 
-functionUncheckStar 
+function uncheckStar(event) {
+  if (event.target.id === "checked-star") {
+    event.target.parentNode.innerHTML = `
+    <img id="star" class="header-img cursor" src="assets/star.svg"/>
+    <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+    `
+}
+}
