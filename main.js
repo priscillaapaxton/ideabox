@@ -37,20 +37,20 @@ function saveIdea(event) {
   newIdea = new Idea(titleInput.value, bodyInput.value)
   savedIdeas.push(newIdea)
   savedIdeasSection.innerHTML += `
-    <div class="saved-idea-box">
+    <section id="${newIdea.id}" class="saved-idea-box">
       <header class="saved-idea-box header">
         <img id="star" class="header-img cursor" src="assets/star.svg"/>
         <img id="x" class="header-img cursor" src="assets/delete.svg"/>
       </header>
       <div class="saved-idea-box body">
-        <h1 class="idea-title">${titleInput.value}</h1>
-        <p class="idea-body-text">${bodyInput.value}</p>
+        <h1 class="idea-title">${newIdea.title}</h1>
+        <p class="idea-body-text">${newIdea.body}</p>
       </div>   
       <footer class="saved-idea-box footer">
        <img class="comment-img" src="assets/comment.svg"/>
         <p class="comment">Comment</p>
       </footer>
-    </div>
+    </section>
   `
   emptyInputs()
   saveButton.disabled = true;
@@ -63,17 +63,25 @@ savedIdeasSection.addEventListener('click', starChanged)
 
 function starChanged() {
   if (event.target.id === 'star') {
-    event.target.parentNode.innerHTML += `
+    event.target.parentNode.innerHTML = `
     <img src="./assets/star-active.svg">
-    
+    <img id="x" class="header-img cursor" src="assets/delete.svg"/>
     `
   }
 }
 
-function removeCard() {
+function removeCard(event) {
    console.log("getting closer")
+   var ideaId = parseInt(event.target.closest('section').id)
   if (event.target.id === 'x') {
-    console.log("hello")
+    console.log(event.target.value)
+    for (var i = 0; i < savedIdeas.length; i++) {
+      if (savedIdeas[i].id === ideaId) {
+        savedIdeas.splice(i,1)
+      }
+    }
     event.target.parentNode.parentNode.remove();
   }
 }
+
+// 
