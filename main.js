@@ -39,7 +39,7 @@ function saveIdea(event) {
   savedIdeasSection.innerHTML += `
     <div class="saved-idea-box">
       <header class="saved-idea-box header">
-        <img id="star" class="header-img" src="assets/star.svg"/>
+        <img id="star" class="header-img cursor" src="assets/star.svg"/>
         <img id="x" class="header-img cursor" src="assets/delete.svg"/>
       </header>
       <div class="saved-idea-box body">
@@ -59,10 +59,19 @@ function saveIdea(event) {
 }
 
 savedIdeasSection.addEventListener('click', removeCard)
+savedIdeasSection.addEventListener('click', starChanged)
+
+function starChanged() {
+  if (event.target.id === 'star') {
+    event.target.parentNode.innerHTML = `
+    <img src="./assets/star-active.svg">
+    <img id="x" class="header-img cursor" src="assets/delete.svg"/>`
+  }
+}
 
 function removeCard() {
    console.log("getting closer")
-  if (event.target.classList.contains('header-img')) {
+  if (event.target.id === 'x') {
     console.log("hello")
     event.target.parentNode.parentNode.remove();
   }
