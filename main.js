@@ -3,7 +3,7 @@ var titleInput = document.querySelector('#inputTitle');
 var bodyInput = document.querySelector('#inputBody');
 var saveButton = document.querySelector('#buttonSave');
 var savedIdeasSection = document.querySelector('#savedIdeasCards')
-var savedIdeaBox = document.querySelector('.saved-idea-box header')
+
 
 // ***** Data Model ********
 var savedIdeas = [];
@@ -13,7 +13,7 @@ var newIdea;
 saveButton.addEventListener('click', saveIdea);
 titleInput.addEventListener('input', buttonChange)
 bodyInput.addEventListener('input', buttonChange)
-savedIdeaBox.addEventListener('click', checkStar)
+savedIdeasSection.addEventListener('click', checkStar)
 
 // ***** Event Handlers *******
 saveButton.disabled = true;
@@ -61,8 +61,12 @@ function saveIdea(event) {
 
 function checkStar(event) {
  if (event.target.id === "star") {
-  event.target.ParentNode.innerHTML = 
-  `<img id="star" class="header-img cursor" src="assets/star-active.svg"/>
-  <img id="x" class="header-img cursor"src="assets/delete.svg"/>`
+  console.log("hi")
+  event.target.parentNode.innerHTML = `
+  <img id="checked-star" class="header-img cursor" src="assets/star-active.svg"/>
+  <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+  `
  }
 };
+
+functionUncheckStar 
