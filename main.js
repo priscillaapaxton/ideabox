@@ -4,7 +4,7 @@ var bodyInput = document.querySelector('#inputBody');
 var saveButton = document.querySelector('#buttonSave');
 var savedIdeasSection = document.querySelector('#savedIdeasCards');
 var showStarredButton = document.querySelector('#showStarredButton')
-
+var searchInput = document.querySelector(".search-input")
 // ***** Data Model ********
 var savedIdeas = [];
 var newIdea;
@@ -16,6 +16,7 @@ bodyInput.addEventListener('input', buttonChange);
 savedIdeasSection.addEventListener('click', deleteIdea);
 savedIdeasSection.addEventListener('click', starIdea);
 showStarredButton.addEventListener('click', showStarred)
+searchInput.addEventListener("input", filterSavedIdeas)
 
 // ***** Event Handlers *******
 saveButton.disabled = true;
@@ -121,6 +122,19 @@ function showStarred () {
       if (!savedIdeas[i].starred) {
         idea.classList.remove('hidden');
       }
+    }
+  }
+}
+
+function filterSavedIdeas() {
+    var letters = searchInput.value.toUpperCase();
+  for (var i = 0; i < savedIdeas.length; i++) {
+    var idea = document.getElementById(savedIdeas[i].id)
+    if (!savedIdeas[i].title.toUpperCase().includes(letters) && !savedIdeas[i].body.toUpperCase().includes(letters)) {
+     idea.classList.add('hidden');
+    } else {
+     idea.classList.remove('hidden');
+
     }
   }
 }
