@@ -5,11 +5,13 @@
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-For the individual who has too many ideas and no where to store them, Ideabox is the solution! When the user has an idea, they use the application's form to title and describe their idea. Once saved, the idea (and subsequent) will populate an area below. The user can favorite their ideas by clicking on the idea's "star" button, and even filter their perspective to only see ideas that contain a star. If the user has too many ideas and wants to locate one, there is a third input field that will filter the displayed ideas based on the search input.
+For the individual who has too many ideas and no where to store them, Ideabox is the solution! When the user has an idea, they use the application's input fields to title and describe their idea. Once saved, the idea (and subsequent) will populate an area below. The user can favorite their ideas by clicking on the idea's "star" button, and even filter their perspective to only see ideas that contain a star. If the user has too many ideas and wants to locate one, there is a third input field that will filter the displayed ideas based on the search input.
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
+Clone down <a href="https://github.com/priscillaapaxton/ideabox">this</a> repository to your local machine using your terminal.
+In your terminal, navigate to this project.
+Run the command open index.html to open the website.
 
 
 ### Preview of App:
@@ -25,18 +27,12 @@ This is our first group project. We are in the fourth week of the Turing Front E
 - Sarah Moore: https://www.linkedin.com/in/sarah-moore-a35196127/
 - Patrick Ankiewicz: https://www.linkedin.com/in/patrick-ankiewicz-539557267/
 - Priscilla Paxton: https://www.linkedin.com/in/priscilla-paxton-9175bb199/
-- Race Osuna: WIP
-
+- Race Osuna: https://github.com/RaceOsuna
+- 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-Gain an understanding of how to write clean HTML and CSS to match a provided comp
-Understand what it looks like to have a separate data model (using a class) and DOM model
-Incorporate & iterate over arrays in order to filter what is being displayed
-Craft code with clean style, using small functions that show trends toward DRYness and SRP
-
+[//]: <> (What were the learning goals of this project? What tech did you work with?
 This project demonstrates our precise ablity to match a given comp with HTML and CSS styling. Contains a seperate JavaScript data model that collabprates with the DOM for concise, dynamic code. Functions have been refactored to be succint and improve readability. 
 
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
-Each requirement of this project presented different challenges that pushed our understanding and knowledge. Filtering the display of the saved ideas was a
-
+Each requirement of this project presented different challenges that pushed our understanding and knowledge. A significant accomplishment for us was to give the application funcionality of filtering the user's view of ideas that were starred/unstarred as well as a filter search that displayed cards that contained text in the search bar. These two features required our understanding updating not only the part that the user interacted with (the DOM) but the datamodel as well.
