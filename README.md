@@ -30,7 +30,7 @@ This is our first group project. We are in the fourth week of the Turing Front E
 - Race Osuna: https://github.com/RaceOsuna
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?
+[//]: <> (What were the learning goals of this project? What tech did you work with?)
 This project demonstrates our precise ablity to match a given comp with HTML and CSS styling. Contains a seperate JavaScript data model that collabprates with the DOM for concise, dynamic code. Functions have been refactored to be succint and improve readability. 
 
 ### Wins + Challenges:
