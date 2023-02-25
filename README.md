@@ -28,7 +28,7 @@ This is our first group project. We are in the fourth week of the Turing Front E
 - Patrick Ankiewicz: https://www.linkedin.com/in/patrick-ankiewicz-539557267/
 - Priscilla Paxton: https://www.linkedin.com/in/priscilla-paxton-9175bb199/
 - Race Osuna: https://github.com/RaceOsuna
-- 
+
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?
 This project demonstrates our precise ablity to match a given comp with HTML and CSS styling. Contains a seperate JavaScript data model that collabprates with the DOM for concise, dynamic code. Functions have been refactored to be succint and improve readability. 
