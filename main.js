@@ -130,7 +130,7 @@ function filterSavedIdeas() {
     var letters = searchInput.value.toUpperCase();
   for (var i = 0; i < savedIdeas.length; i++) {
     var idea = document.getElementById(savedIdeas[i].id)
-    if (!savedIdeas[i].title.toUpperCase().includes(letters) || !savedIdeas[i].body.toUpperCase().includes(letters)) {
+    if (!savedIdeas[i].title.toUpperCase().includes(letters) && !savedIdeas[i].body.toUpperCase().includes(letters)) {
      idea.classList.add('hidden');
     } else {
      idea.classList.remove('hidden');
