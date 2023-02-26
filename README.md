@@ -1,7 +1,4 @@
-
-
-
-# Hang in There  
+# Ideabox  
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
@@ -16,6 +13,7 @@ Run the command open index.html to open the website.
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJiNTFkOGJiOTg4ZDFiZDdmYTVjY2Q1NjliYTZjN2NlNDE2NGUyYSZjdD1n/r9Tg30lZPtJ6mqnxeT/giphy.gif)
 
 
 ### Context:
@@ -23,11 +21,11 @@ Run the command open index.html to open the website.
 This is our first group project. We are in the fourth week of the Turing Front End software development program. This project took roughly 25 hours to complete.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-- Sarah Moore: https://www.linkedin.com/in/sarah-moore-a35196127/
-- Patrick Ankiewicz: https://www.linkedin.com/in/patrick-ankiewicz-539557267/
-- Priscilla Paxton: https://www.linkedin.com/in/priscilla-paxton-9175bb199/
-- Race Osuna: https://github.com/RaceOsuna
+[//]: <> (Who worked on this application? Link to their LinkedIn.)
+- [Sarah Moore](https://www.linkedin.com/in/sarah-moore-a35196127/)
+- [Patrick Ankiewicz](https://www.linkedin.com/in/patrick-ankiewicz-539557267/)
+- [Priscilla Paxton](https://www.linkedin.com/in/priscilla-paxton-9175bb199/)
+- [Race Osuna](https://github.com/RaceOsuna)
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
