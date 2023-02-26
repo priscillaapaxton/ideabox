@@ -13,4 +13,11 @@ class Idea {
       this.starred = true;
     }
   }
+
+  deleteThis(ideaId) {
+    if (ideaId === this.id) {
+        savedIdeas.splice([savedIdeas.indexOf(this)],1)
+      }
+    event.target.closest('section').remove();
+  }
 }

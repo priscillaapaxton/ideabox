@@ -4,7 +4,7 @@ var bodyInput = document.querySelector('#inputBody');
 var saveButton = document.querySelector('#buttonSave');
 var savedIdeasSection = document.querySelector('#savedIdeasCards');
 var showStarredButton = document.querySelector('#showStarredButton')
-var searchInput = document.querySelector(".search-input")
+var searchInput = document.querySelector("#inputSearch")
 // ***** Data Model ********
 var savedIdeas = [];
 var newIdea;
@@ -67,38 +67,27 @@ function deleteIdea (event) {
 
   if (event.target.id === 'x') {
     for (var i = 0; i < savedIdeas.length; i++) {
-      if (ideaId === savedIdeas[i].id) {
-        savedIdeas.splice(i,1)
-      }
+      savedIdeas[i].deleteThis(ideaId)
     }
-    event.target.closest('section').remove();
   }
 }
 
 function starIdea (event) {
   var ideaId = parseInt(event.target.closest('section').id)
 
-  if (event.target.id === 'star') {
-    event.target.parentNode.innerHTML = `
-    <img id="activeStar" class="header-img cursor" src="assets/star-active.svg"/>
-    <img id="x" class="header-img cursor"src="assets/delete.svg"/>
-    `
-      
-    for (var i = 0; i < savedIdeas.length; i++) {
-      if (ideaId === savedIdeas[i].id) {
-        savedIdeas[i].updateIdea()
-      }
-    }
-  } else if (event.target.id === 'activeStar') {
-    event.target.parentNode.innerHTML = `
-    <img id="star" class="header-img cursor" src="assets/star.svg"/>
-    <img id="x" class="header-img cursor"src="assets/delete.svg"/>
-    `
-    
-    for (var i = 0; i < savedIdeas.length; i++) {
-      if (ideaId === savedIdeas[i].id) {
-        savedIdeas[i].updateIdea()
-      }
+  for (var i = 0; i < savedIdeas.length; i++) {
+    if (ideaId === savedIdeas[i].id && event.target.id === 'star') {
+      event.target.parentNode.innerHTML = `
+        <img id="activeStar" class="header-img cursor" src="assets/star-active.svg"/>
+        <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+        `;
+      savedIdeas[i].updateIdea();
+    } else if (ideaId === savedIdeas[i].id && event.target.id === 'activeStar') {
+      event.target.parentNode.innerHTML = `
+        <img id="star" class="header-img cursor" src="assets/star.svg"/>
+        <img id="x" class="header-img cursor"src="assets/delete.svg"/>
+        `;
+      savedIdeas[i].updateIdea();
     }
   }
 }

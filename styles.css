@@ -209,3 +209,8 @@ form {
 .hidden {
   display: none;
 }
+
+textarea {
+  font-family: 'Open Sans', sans-serif, bold;
+  font-size: 11pt;
+}
