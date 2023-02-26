@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #E9E9F3;
-  width: 35%;
+  width: 250px;
 }
 
 .side-title-button {
@@ -26,7 +26,9 @@ body {
 
 .side-nav-header1 {
   color: #E9E9F3;
+  font-size: medium;
   padding: 10px;
+  margin: 6px
 }
 
 .side-nav-header2 {
@@ -74,16 +76,22 @@ form {
 .title-input {
   border: 1px solid;
   border-color: #353567;
-  width: 300px;
+  width: 295px;
   height: 35px;
+  border-radius: 2.5px;
 }
 
 .body-input {
   height: 70px;
-  width: 300px;
+  width: 295px;
+  border: 1px solid;
+  border-color: #353567;
+  border-radius: 2px;
 }
 
 .search-box {
+  border: 1px solid;
+  border-color: #353567;
   display: flex;
   flex-direction: row;
   background-color: #353567;
@@ -91,13 +99,16 @@ form {
   height: 35px;
   align-items: center;
   justify-content: space-between;
+  border-radius: 2.5px;
 }
 
 .search-input {
-  width: 270px;
+  width: 260px;
   height: 35px;
   border: 0;
   padding: 0;
+  padding-left: 8px;
+  border-radius: 1px;
 }
 
 .search-icon {
@@ -115,6 +126,7 @@ form {
   border: 1px solid;
   border-color: #353567;
   font-size: medium;
+  border-radius: 2.5px;
 }
 
 .cursor {
@@ -129,31 +141,48 @@ form {
   padding: 20px;
   background-color: #EAEAF4;
   height: 60%;
+  overflow: auto;
 }
 
 .saved-idea-box {
+  display: flex;
+  flex-direction: column;
   background-color: #FFFFFF;
-  height: 130px;
+  border: 1px solid;
+  border-color: #353567;
+  height: 220px;
 }
 
 .saved-idea-box header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #1F1F3D;
-  height: 20px;
+  height: 30px;
   border: 1px solid;
   border-color: #353567;  
 }
 
+.header-img,
+.comment-img {
+  height: 25x;
+  width: 25px;
+}
+
 .idea-title {
+  display: flex;
   margin-left: 10px;
   margin-right: 10px;
   font-size: medium;
+  height: 20%;
 }
 
 .idea-body-text {
+  display: flex;
   margin-left: 10px;
   margin-right: 10px;
+  height: 80%;
+  font-family: 'Open Sans', sans-serif, light;
 }
 
 .saved-idea-box body {
@@ -161,21 +190,20 @@ form {
   color: #1F1F3D;
   border: 1px solid;
   border-color: #353567;
+  height: 20px;
 }
 
 .saved-idea-box footer {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   background-color: #5356A4;
   color: #E9E9F3;
-  height: 20px;
+  height: 30px;
   font-size: small;
   border: 1px solid;
   border-color: #353567;  
-}
-
-.comment {
-  margin-top: 2px;
 }
 
 .hidden {
