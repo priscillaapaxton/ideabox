@@ -4,10 +4,10 @@ html {
 
 body {
   display: flex;
-  font-family: 'Open Sans', sans-serif, bold;
+  font-family: sans-serif;
   background-color: #1F1F3D;
-  margin: 0;
   height: 100%;
+  margin: 0;
 }
 
 /* Side Nav */
@@ -28,7 +28,7 @@ body {
   color: #E9E9F3;
   font-size: medium;
   padding: 10px;
-  margin: 6px
+  margin: 6px;
 }
 
 .side-nav-header2 {
@@ -40,13 +40,13 @@ body {
 .side-nav-button {
   background-color: #5356A4;
   color: #E9E9F3;
-  margin: 10px;
-  padding: 10px;
   font-size: medium;
   border: 1px solid;
   border-color: #353567;
   width: 200px;
   height: 35px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .ideas-form-and-saved {
@@ -60,10 +60,10 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #A9AAD2;
   height: 40%;
   width: 100%;
-  align-items: center;
   margin: 0;
 }
 
@@ -76,17 +76,19 @@ form {
 .title-input {
   border: 1px solid;
   border-color: #353567;
+  border-radius: 2.5px;
   width: 295px;
   height: 35px;
   border-radius: 2.5px;
 }
 
 .body-input {
-  height: 70px;
-  width: 295px;
+  font-family: 'Open Sans', sans-serif;
   border: 1px solid;
   border-color: #353567;
   border-radius: 2px;
+  height: 70px;
+  width: 295px;
 }
 
 .search-box {
@@ -94,21 +96,23 @@ form {
   border-color: #353567;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  border-color: #353567;
   background-color: #353567;
+  border-radius: 2.5px;
   width: 300px;
   height: 35px;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 2.5px;
 }
 
 .search-input {
+  border: 0;
+  border-radius: 1px;
   width: 260px;
   height: 35px;
-  border: 0;
   padding: 0;
   padding-left: 8px;
-  border-radius: 1px;
 }
 
 .search-icon {
@@ -119,13 +123,13 @@ form {
 }
 
 .save-button {
+  font-size: medium;
   background-color: #353567;
   color: #E9E9F3;
   width: 300px;
   height: 35px;
   border: 1px solid;
   border-color: #353567;
-  font-size: medium;
   border-radius: 2.5px;
 }
 
@@ -138,10 +142,10 @@ form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding: 20px;
+  overflow: auto;
   background-color: #EAEAF4;
   height: 60%;
-  overflow: auto;
+  padding: 20px;
 }
 
 .saved-idea-box {
@@ -158,9 +162,15 @@ form {
   flex-direction: row;
   justify-content: space-between;
   background-color: #1F1F3D;
-  height: 30px;
   border: 1px solid;
   border-color: #353567;  
+  height: 30px;
+}
+
+.header-img,
+.comment-img {
+  height: 25x;
+  width: 25px;
 }
 
 .header-img,
@@ -171,14 +181,16 @@ form {
 
 .idea-title {
   display: flex;
-  margin-left: 10px;
-  margin-right: 10px;
   font-size: medium;
   height: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .idea-body-text {
   display: flex;
+  font-family: 'Open Sans', sans-serif;
+  height: 80%;
   margin-left: 10px;
   margin-right: 10px;
   height: 80%;
@@ -200,10 +212,10 @@ form {
   align-items: center;
   background-color: #5356A4;
   color: #E9E9F3;
-  height: 30px;
   font-size: small;
   border: 1px solid;
   border-color: #353567;  
+  height: 30px;
 }
 
 .hidden {
