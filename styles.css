@@ -79,7 +79,6 @@ form {
   border-radius: 2.5px;
   width: 295px;
   height: 35px;
-  border-radius: 2.5px;
 }
 
 .body-input {
@@ -92,16 +91,14 @@ form {
 }
 
 .search-box {
-  border: 1px solid;
-  border-color: #353567;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 1px solid;
   border-color: #353567;
-  background-color: #353567;
   border-radius: 2.5px;
+  background-color: #353567;
   width: 300px;
   height: 35px;
 }
@@ -173,12 +170,6 @@ form {
   width: 25px;
 }
 
-.header-img,
-.comment-img {
-  height: 25x;
-  width: 25px;
-}
-
 .idea-title {
   display: flex;
   font-size: medium;
@@ -193,8 +184,6 @@ form {
   height: 80%;
   margin-left: 10px;
   margin-right: 10px;
-  height: 80%;
-  font-family: 'Open Sans', sans-serif, light;
 }
 
 .saved-idea-box body {
