@@ -2,34 +2,36 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
     <nav class="side-navigation">
       <h1 class="side-nav-header1">IdeaBox</h1>
       <div id="sideNavDiv2" class="side-title-button">
         <header class="side-nav-header2">Filter Starred Ideas</header>
-        <button id="showStarredButton" class="side-nav-button cursor">Show Starred Ideas</button>
+        <button id="showStarredButton" class="side-nav-button">Show Starred Ideas</button>
       </div>
     </nav>
     <div class="ideas-form-and-saved">
       <form>
         <div>
-          <header class="form-header">Title</header>
+          <label class="form-header" for="title">Title</label>
           <input class="title-input" id="inputTitle" type="text" name="title" maxlength="20">
         </div>
         <div>
-          <header class="form-header">Body</header>
+          <label class="form-header" for="body">Body</label>
           <textarea class="body-input" id="inputBody" type="text" name="body" style="resize: none;" maxlength="125"></textarea> 
         </div>
         <button class="save-button" id="buttonSave">Save</button>
         <div class="search-box">
-          <img class="search-icon" src="assets/search.svg"/>
-          <input type="text" name="search" class="search-input" placeholder="Search Ideas">
+          <img class="search-icon" src="assets/search.svg" alt="magnifying glass"/>
+          <input id="inputSearch" type="text" name="search" class="search-input" placeholder="Search Ideas">
         </div>
-        </form>
+      </form>
       <div class="saved-ideas" id="savedIdeasCards"></div>
     </div>
+    <script src="Idea.js"></script>  
+    <script src="main.js"></script>  
   </body>
-  <script src="Idea.js"></script>  
-  <script src="main.js"></script>  
 </html>
